@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 CFG = types.GenerateContentConfig(response_mime_type="application/json", temperature=0)
 
 GRADE_PROMPT = """You are a produce quality grader at an Indian mandi.
